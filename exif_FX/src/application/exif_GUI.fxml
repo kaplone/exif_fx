@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.exif_GUI_controller">
+<top><HBox prefHeight="62.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+<children><Button fx:id="rep_button" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#onRepBtn" text="répertoire">
+<HBox.margin>
+<Insets left="50.0" top="20.0" />
+</HBox.margin></Button><Label text="taille : ">
+<HBox.margin>
+<Insets left="50.0" top="25.0" />
+</HBox.margin></Label><Button fx:id="enc_button" mnemonicParsing="false" onAction="#onEncBtn" text="Convertir">
+<HBox.margin>
+<Insets left="100.0" top="20.0" />
+</HBox.margin></Button>
+</children></HBox>
+</top>
+<center><HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<children><Label fx:id="aff_liste" prefHeight="447.0" prefWidth="802.0" />
+</children></HBox>
+</center>
+<bottom><HBox prefHeight="20.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+<children><ProgressBar fx:id="progressbar" prefHeight="20.0" prefWidth="773.0" progress="0.0">
+<HBox.margin>
+<Insets left="10.0" />
+</HBox.margin></ProgressBar>
+</children></HBox>
+</bottom></BorderPane>
