@@ -48,6 +48,10 @@ public class exif_GUI_controller implements Initializable {
 	protected void onRepBtn(){
 		repertoire = chooseDir();
 		//aff_liste.textProperty().set(Arrays.asList(repertoire.listFiles()).stream().map(a -> a.toString()).collect(Collectors.joining("\n")));
+		
+		System.out.println(repertoire.toPath().getRoot());
+		System.out.println(repertoire.toPath().getParent());
+		System.out.println(repertoire.toPath().getParent().toString().contains("/mnt/"));
 
 	}
 	
@@ -94,10 +98,16 @@ public class exif_GUI_controller implements Initializable {
 		
 		System.out.println(soletanche ? "___SOLETANCHE___" : "___LAFARGE___");
 		
+//		System.out.println(repertoire.toPath().getRoot());
+//		System.out.println(repertoire.toPath().getParent());
+//		System.out.println(repertoire.toPath().getRoot().toString().contains("mnt"));
+		
+		
 		temporaire = "/mnt/nfs_nas/SATELLITE/SETE_QUAI_H/TIMELAPSES/Full/" + (soletanche ? "SOLETANCHE" : "LAFARGE") + "/RENOMME_temp";
 		renomme = "/mnt/nfs_nas/SATELLITE/SETE_QUAI_H/TIMELAPSES/Full/" + (soletanche ? "SOLETANCHE" : "LAFARGE") + "/RENOMME";
 		preview = "/mnt/nfs_nas/SATELLITE/SETE_QUAI_H/TIMELAPSES/Preview/" + (soletanche ? "soletanche" : "lafarge");
-        mogrify = "mogrify";		
+        mogrify = "mogrify";	
+        
 //		temporaire = "/Volumes/NAS/SATELLITE/SETE_QUAI_H/TIMELAPSES/Full/" + (soletanche ? "SOLETANCHE" : "LAFARGE") + "/RENOMME_temp";
 //		renomme = "/Volumes/NAS/SATELLITE/SETE_QUAI_H/TIMELAPSES/Full/" + (soletanche ? "SOLETANCHE" : "LAFARGE") + "/RENOMME";
 //		preview = "/Volumes/NAS/SATELLITE/SETE_QUAI_H/TIMELAPSES/Preview/" + (soletanche ? "soletanche" : "lafarge");
